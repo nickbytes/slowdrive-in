@@ -137,5 +137,7 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# nickbytes get your editor outta here
+# project specific
 .idea
+Videos/
+Images/
