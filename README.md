@@ -7,3 +7,9 @@ Upload dithered screenshots of movies to ~~instagram~~. The instagram API is pre
 Most of this code is from https://github.com/TomWhitwell/SlowMovie but I've adapted it to upload photos ~~to Instagram~~.
 
 Where to upload now... hmm.
+
+## Usage
+
+1. create virtualenv and install dependencies
+2. Add `.mp4` videos to the `Videos/` folder
+3. Run script, images are output to `Images/`
