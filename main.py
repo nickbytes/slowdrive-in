@@ -52,4 +52,4 @@ pil_im = pil_im.convert(mode="1", dither=Image.FLOYDSTEINBERG)
 
 print("Diplaying frame %d of %s" % (frame, currentVideo))
 
-pil_im.save(fp='grab.jpg')
+pil_im.save(fp=f"{frame}-{os.path.splitext(currentVideo)[0]}.jpg")
