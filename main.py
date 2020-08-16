@@ -3,6 +3,7 @@ import os, time, sys, random
 from PIL import Image
 import ffmpeg
 
+
 def generate_frame(in_filename, out_filename, time, width, height):
     (
         ffmpeg.input(in_filename, ss=time)
@@ -43,7 +44,13 @@ frame = random.randint(0, frameCount)
 msTimecode = "%dms" % (frame * 41.666666)
 
 # Use ffmpeg to extract a frame from the movie, crop it, letterbox it and save it as grab.jpg
-generate_frame(inputVid, f"Images/{frame}-{os.path.splitext(currentVideo)[0]}.jpg", msTimecode, width, height)
+generate_frame(
+    inputVid,
+    f"Images/{frame}-{os.path.splitext(currentVideo)[0]}.jpg",
+    msTimecode,
+    width,
+    height,
+)
 
 # Open grab.jpg in PIL
 pil_im = Image.open(f"Images/{frame}-{os.path.splitext(currentVideo)[0]}.jpg")
