@@ -13,3 +13,9 @@ Where to upload now... hmm.
 1. create virtualenv and install dependencies
 2. Add `.mp4` videos to the `Videos/` folder
 3. Run script, images are output to `Images/`
+
+## What does this do?
+
+Not a whole lot. I wanted to upload these daily to instagram, but the API is more locked down now.
+
+Check out [this branch](https://github.com/nickbytes/slowdrive-in/tree/applescript), which saves the output image as your background (macOS).
