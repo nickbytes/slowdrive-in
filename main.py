@@ -25,6 +25,8 @@ while not (currentVideo.endswith(".mp4")):
     randomVideo = random.randint(0, videoCount - 1)
     currentVideo = os.listdir(viddir)[randomVideo]
 inputVid = viddir + currentVideo
+
+# print input movie
 print(inputVid)
 
 # Ensure this matches your particular screen or desired dimensions
@@ -53,3 +55,4 @@ print("Diplaying frame %d of %s" % (frame, currentVideo))
 
 pil_im.save(fp=f"Images/{frame}-{os.path.splitext(currentVideo)[0]}.jpg")
 
+# now you gotta do something with these images
