@@ -3,6 +3,8 @@ import os, time, sys, random
 from PIL import Image
 import ffmpeg
 
+from appscript import app, mactypes
+
 def generate_frame(in_filename, out_filename, time, width, height):
     (
         ffmpeg.input(in_filename, ss=time)
@@ -56,3 +58,5 @@ print("Diplaying frame %d of %s" % (frame, currentVideo))
 pil_im.save(fp=f"Images/{frame}-{os.path.splitext(currentVideo)[0]}.jpg")
 
 # now you gotta do something with these images
+
+app('Finder').desktop_picture.set(mactypes.File(f"Images/{frame}-{os.path.splitext(currentVideo)[0]}.jpg"))
